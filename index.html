@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year Wishes in AR</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Include A-Frame and AR.js -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body>
+  <!-- AR Scene -->
+  <a-scene embedded arjs>
+    <!-- Marker for AR -->
+    <a-marker preset="hiro">
+      <!-- Load the 3D .obj model -->
+      <a-obj-model 
+<!--         src="./assets/newyear.obj"  -->
+        src="./new-year-obj.obj" 
+        material="color: gold;" 
+        scale="1 1 1" 
+        position="0 0 0">
+      </a-obj-model>
+      <!-- Text for New Year Wishes -->
+      <a-text 
+        value="Happy New Year 2024!\nFrom Our Company" 
+        color="red" 
+        position="0 1 0" 
+        align="center"
+        scale="2 2 2">
+      </a-text>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+  <!-- Link to JS -->
+  <script src="script.js"></script>
+</body>
+</html>
