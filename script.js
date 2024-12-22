@@ -9,6 +9,10 @@
 //   }
 // });
 // JavaScript to enhance AR experience
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("New Year AR Experience is ready!");
+// document.addEventListener("DOMContentLoaded", () => {
+//   console.log("New Year AR Experience is ready!");
+// });
+// Optional: Add Interactivity
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('AR Scene Loaded');
 });
