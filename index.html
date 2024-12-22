@@ -4,38 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Year Wishes in AR</title>
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Include A-Frame and AR.js -->
+  <!-- A-Frame Library -->
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <!-- AR.js Library -->
   <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
   <!-- AR Scene -->
   <a-scene embedded arjs>
-    <!-- Marker for AR -->
+    <!-- Ambient Lighting -->
+    <a-light type="ambient" intensity="0.8"></a-light>
+    <!-- Directional Lighting -->
+    <a-light type="directional" position="0 2 1" intensity="1"></a-light>
+
+    <!-- AR Marker -->
     <a-marker preset="hiro">
-      <!-- Load the 3D .obj model -->
-      <a-obj-model 
-<!--         src="./assets/newyear.obj"  -->
-<!--         src=".assets/new/new-year-obj.obj"  -->
-        src=".assets/new-year-obj.obj"
-        material="color: gold;" 
-        scale="1 1 1" 
-        position="0 0 0">
+      <!-- 3D Object -->
+      <a-obj-model
+<!--         src="./assets/newyear.obj" -->
+        src="/assets/new-year-obj.obj"
+        scale="0.5 0.5 0.5"
+        position="0 0 0"
+        rotation="0 0 0">
       </a-obj-model>
-      <!-- Text for New Year Wishes -->
+
+      <!-- New Year Wishes Text -->
       <a-text 
-        value="Happy New Year 2024!\nFrom Our Company" 
-        color="red" 
-        position="0 1 0" 
+        value="Happy New Year 2024!\nFrom Our Company"
+        color="#ff5722"
+        position="0 1 0"
         align="center"
-        scale="2 2 2">
+        scale="1.5 1.5 1.5">
       </a-text>
     </a-marker>
+
+    <!-- Camera -->
     <a-entity camera></a-entity>
   </a-scene>
-  <!-- Link to JS -->
-  <script src="script.js"></script>
+
+  <!-- Link to External JavaScript -->
+  <script src="./script.js"></script>
 </body>
 </html>
